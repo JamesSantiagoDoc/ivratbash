@@ -6,5 +6,4 @@ client.connect(err => {
   if (err) throw err;
 });
 const collection = client.db("ratdb").collection("ratcollection");
-
 module.exports = {collection, ObjectId}
