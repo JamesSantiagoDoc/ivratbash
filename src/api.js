@@ -5,9 +5,8 @@ const {collection, ObjectId} = require("../config/database")
 const app = express()
 const router = express.Router()
 
-app.use(cors())
 const bodyParser = require('body-parser');
-
+app.use(cors())
 app.use(bodyParser.urlencoded({
 
     extended: true
