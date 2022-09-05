@@ -47,7 +47,7 @@ router
         
         let myquery = {_id: ObjectId(req.params.id)};
         let newvalues = { $set: req.body };
-        collection.updateOne(myquery, newvalues, (err, res) => {
+        collection.updateOne(myquery, newvalues, (err, result) => {
             if (err) throw err;
         });
         res.send("1 document updated");
@@ -56,7 +56,7 @@ router
         //res.send(`Update User with ID ${req.params.id}`)
         
         let myquery = {_id: ObjectId(req.params.id)};
-        collection.deleteOne(myquery, function(err, obj) {
+        collection.deleteOne(myquery, function(err, result) {
             if (err) throw err;
         });
         res.send("1 document deleted");
